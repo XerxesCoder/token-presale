@@ -63,11 +63,11 @@ Deploy the dApp on your preferred hosting platform (e.g., Vercel, Netlify).
 
 ## Contract Information
 
-- **Boom Token Contract Address**: [0x3a70129725b3acA9ddBB9D222284DB814A2cE8C9](https://scan.soniclabs.com/address/0x3a70129725b3acA9ddBB9D222284DB814A2cE8C9)
-- **Presale Contract Address**: [0x6f5141c96fB92007f371a600FA191FF02626a0cC](https://scan.soniclabs.com/address/0x6f5141c96fB92007f371a600FA191FF02626a0cC)
-- **Mock USDT Contract Address**: [0x65f0196d0823717F330837E59860B0448888334F](https://scan.soniclabs.com/address/0x65f0196d0823717F330837E59860B0448888334F)
+- **Boom Token Contract Address**: [0x3a70129725b3acA9ddBB9D222284DB814A2cE8C9](https://64165.testnet.routescan.io/address/0x3a70129725b3acA9ddBB9D222284DB814A2cE8C9)
+- **Presale Contract Address**: [0x6f5141c96fB92007f371a600FA191FF02626a0cC](https://64165.testnet.routescan.io/address/0x6f5141c96fB92007f371a600FA191FF02626a0cC)
+- **Mock USDT Contract Address**: [0x65f0196d0823717F330837E59860B0448888334F](https://64165.testnet.routescan.io/address/0x65f0196d0823717F330837E59860B0448888334F)
 
-All contracts are verified, and you can interact with them through [SonicScan](https://scan.soniclabs.com).
+All contracts are verified, and you can interact with them through [SonicScan](https://64165.testnet.routescan.io).
 
 ## Built With
 
