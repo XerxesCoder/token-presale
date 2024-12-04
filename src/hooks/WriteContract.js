@@ -12,6 +12,7 @@ import { useContractInfo } from "./ReadContract";
 
 export function useBuyUSDT() {
   const { userUSDTBalanceRefetch } = useContractInfo();
+
   const {
     data: hashUSDT,
     isPending: isPendingUSDT,
@@ -40,9 +41,9 @@ export function useBuyUSDT() {
     }
 
     if (isConfirmedUSDT) {
+      userUSDTBalanceRefetch();
       toast.dismiss();
       toast.success("Transaction confirmed!");
-      userUSDTBalanceRefetch();
     }
 
     if (errorUSDT) {
@@ -62,7 +63,8 @@ export function useBuyUSDT() {
 }
 
 export function useBuy(amount, currency) {
-  const { refetchUserInfo } = useContractInfo();
+  const { refetchUserInfo, userUSDTBalance } = useContractInfo();
+
   const { address } = useAccount();
   const { data: hash, isPending, writeContract, error } = useWriteContract();
   const { isLoading: isConfirming, isSuccess: isConfirmed } =
@@ -71,6 +73,10 @@ export function useBuy(amount, currency) {
     });
 
   async function buy() {
+    if (currency !== "S" && Number(userUSDTBalance) / 1e6 < amount) {
+      toast.error("Insufficient USDT balance");
+      return;
+    }
     if (currency == "S") {
       writeContract({
         address: saleInfo.contractAddress,
@@ -95,9 +101,9 @@ export function useBuy(amount, currency) {
     }
 
     if (isConfirmed) {
+      refetchUserInfo();
       toast.dismiss();
       toast.success("Transaction confirmed!");
-      refetchUserInfo();
     }
 
     if (error) {
@@ -117,6 +123,7 @@ export function useBuy(amount, currency) {
 }
 
 export function useApprove(amount) {
+  const { refetchuserAllowance } = useContractInfo();
   const {
     data: hashApprove,
     isPending: isPendingApprove,
@@ -145,6 +152,7 @@ export function useApprove(amount) {
     }
 
     if (isConfirmedApprove) {
+      refetchuserAllowance();
       toast.dismiss();
       toast.success("Approved!");
     }

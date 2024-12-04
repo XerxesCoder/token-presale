@@ -39,7 +39,7 @@ export function useContractInfo() {
     functionName: "currentTokenSold",
   });
 
-  const { data: userAllowance } = useReadContract({
+  const { data: userAllowance, refetch: refetchuserAllowance } = useReadContract({
     address: saleInfo.usdtAddress,
     abi: saleInfo.abi,
     functionName: "allowance",
@@ -73,6 +73,7 @@ export function useContractInfo() {
     balance,
     bought,
     userAllowance,
+    refetchuserAllowance,
     userInfo,
     refetchUserInfo,
     userSBalance,
