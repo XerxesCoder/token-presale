@@ -8,10 +8,21 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "overrides": {
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106"
+  },
   "dependencies": {
+    "@tanstack/react-query": "^5.62.0",
+    "connectkit": "^1.8.2",
+    "framer-motion": "^11.12.0",
+    "lucide-react": "^0.462.0",
+    "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "sonner": "^1.7.0",
+    "viem": "^2.21.53",
+    "wagmi": "^2.13.2"
   },
   "devDependencies": {
     "postcss": "^8",
