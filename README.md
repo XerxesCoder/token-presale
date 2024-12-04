@@ -71,11 +71,11 @@ All contracts are verified, and you can interact with them through [SonicScan](h
 
 ## Built With
 
-- **Next.js** - Frontend framework
-- **Tailwind CSS** - Styling
-- **Wagmi** - React hooks for Web3
-- **Viem** - Ethereum client
-- **ConnectKit** - Wallet connection
+- **Next.js** 
+- **Tailwind CSS**
+- **Wagmi** 
+- **Viem**
+- **ConnectKit**
 
 ## License
 
